@@ -14,7 +14,7 @@ float divide(float a, float b) {
 int check_range(int value) {
     if (value < 0) {
         return -1;
-    } else if (value > 9) {
+    } else if (value > 20) {
         return 1;
     } else {
         return 0;
