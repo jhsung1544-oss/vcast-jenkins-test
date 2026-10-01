@@ -21,7 +21,7 @@ int check_range(int value) {
     }
 }
 
-// [새로 추가된 함수] ATG가 이 복잡한 조건들을 자동으로 분석합니다.
+// ATG가 이 복잡한 조건들을 자동으로 분석합니다.
 int calculate_bonus(int years, int score) {
     int bonus = 0;
     if (years >= 10) {
@@ -44,4 +44,35 @@ int calculate_bonus(int years, int score) {
         }
     }
     return bonus;
+}
+
+// [추가 1] switch 문 분기 확인용: 점수를 등급(4~0)으로 변환
+int get_grade(int score) {
+    if (score < 0 || score > 100) {
+        return -1;          // 잘못된 점수
+    }
+    switch (score / 10) {
+        case 10:
+        case 9:
+            return 4;       // A (90~100)
+        case 8:
+            return 3;       // B (80~89)
+        case 7:
+            return 2;       // C (70~79)
+        case 6:
+            return 1;       // D (60~69)
+        default:
+            return 0;       // F (0~59)
+    }
+}
+
+// [추가 2] 복합 조건(&&, ||) 확인용: 입장 가능 여부 판단
+int check_access(int age, int is_member, int has_ticket) {
+    if (age < 0) {
+        return -1;          // 잘못된 나이
+    }
+    if ((age >= 19 && is_member) || has_ticket) {
+        return 1;           // 입장 가능
+    }
+    return 0;               // 입장 불가
 }
