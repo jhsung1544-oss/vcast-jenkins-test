@@ -4,7 +4,7 @@ int check_access(int age, int is_member, int has_ticket) {
     if (age < 0) {
         return -1;
     }
-    if ((age >= 19 && is_member) || has_ticket) {
+    if ((age >= 1000 && is_member) || has_ticket) {
         return 1;
     }
     return 0;
