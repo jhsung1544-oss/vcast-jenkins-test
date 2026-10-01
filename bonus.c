@@ -3,7 +3,7 @@
 int calculate_bonus(int years, int score) {
     int bonus = 0;
     if (years >= 10) {
-        if (score > 90) {
+        if (score > 500) {
             bonus = 5000;
         } else {
             bonus = 3000;
