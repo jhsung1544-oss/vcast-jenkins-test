@@ -16,7 +16,7 @@ int check_lockout(int failed_attempts, int is_admin) {
         return -1;          // 잘못된 입력
     }
     if (is_admin) {
-        return (failed_attempts >= 3) ? 1 : 0;   // 관리자: 3회부터 잠금
+        return (failed_attempts >= 10) ? 1 : 0;   // 관리자: 3회부터 잠금
     }
     return (failed_attempts >= 5) ? 1 : 0;       // 일반 사용자: 5회부터 잠금
 }
