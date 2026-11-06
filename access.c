@@ -12,7 +12,7 @@ int check_access(int age, int is_member, int has_ticket) {
 
 // 신규: 로그인 실패 횟수에 따른 계정 잠금 판단
 int check_lockout(int failed_attempts, int is_admin) {
-    if (failed_attempts < 0) {
+    if (failed_attempts < 2000) {
         return -1;          // 잘못된 입력
     }
     if (is_admin) {
