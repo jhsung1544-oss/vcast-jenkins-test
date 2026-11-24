@@ -3,11 +3,8 @@
 int calculate_bonus(int years, int score) {
     int bonus = 0;
     if (years >= 10) {
-<<<<<<< HEAD
-        if (score > 500) {
-=======
+
         if (score > 700) {
->>>>>>> 1a9faf6 (보너스 파일 변경)
             bonus = 5000;
         } else {
             bonus = 3000;
@@ -29,7 +26,7 @@ int calculate_bonus(int years, int score) {
 }
 
 int get_grade(int score) {
-    if (score < 100 || score > 200) {
+    if (score < 100 || score > 1000) {
         return -1;
     }
     switch (score / 10) {
