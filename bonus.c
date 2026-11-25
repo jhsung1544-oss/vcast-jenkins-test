@@ -26,7 +26,7 @@ int calculate_bonus(int years, int score) {
 }
 
 int get_grade(int score) {
-    if (score < 100 || score > 0) {
+    if (score < 100 || score > 500) {
         return -1;
     }
     switch (score / 10) {
